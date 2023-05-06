@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap");
+body {
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.6;
+}
+.person {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 280px;
+}
+.container {
+  border-radius: 50%;
+  width: 400px;
+  height: 312px;
+  transform: scale(0.48);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.container:hover {
+  transform: scale(0.5);
+}
+.container-inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 800px;
+  top: -200px;
+  clip-path: path(
+    "M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z"
+  );
+}
+.circle {
+  background-color: #00c6e90c;
+  background-image: linear-gradient(160deg, #42e9000c 0%, #80c7d00a 100%);
+  cursor: pointer;
+  border-radius: 50%;
+  height: 383px;
+  left: 9px;
+  position: absolute;
+  top: 210px;
+  width: 383px;
+  transition: 0.3s;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.person:nth-child(1) .circle {
+  background: url(./images/merry_in_heaven_by_zzyzzyy_d8vtl9d.jpg);
+  background-size: contain;
+  background-position: center center;
+}
+.person:nth-child(2) .circle {
+  background: url(./images/1920x1536.jpg);
+  background-size: cover;
+  background-position: bottom;
+}
+.person:nth-child(3) .circle {
+  background: url(./images/serene_falls_by_titaniumdragon_dfhzo3o.png);
+  background-size: cover;
+  background-position: center center;
+}
+img {
+  position: relative;
+  transform: translateY(20px) scale(1.15);
+  transform-origin: 50% bottom;
+  transition: 0.3s;
+}
+.container:hover img {
+  transform: translateY(0) scale(1.2);
+}
+.divider {
+  background-color: #78d2fc;
+  height: 2px;
+  width: 160px;
+}
+.name {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 10px;
+}
+.title {
+  color: #c9c9c9;
+  font-size: 14px;
+  margin-top: 4px;
+}
